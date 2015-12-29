@@ -14,6 +14,10 @@
 		B0188EB51C2E6BB2004FBA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0188EB31C2E6BB2004FBA03 /* LaunchScreen.storyboard */; };
 		B0188EC01C2E6BB2004FBA03 /* SnapDecisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0188EBF1C2E6BB2004FBA03 /* SnapDecisionTests.swift */; };
 		B0188ECB1C2E6BB2004FBA03 /* SnapDecisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0188ECA1C2E6BB2004FBA03 /* SnapDecisionUITests.swift */; };
+		B0A081D31C321F7C008274DA /* TurnListGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D21C321F7C008274DA /* TurnListGenerator.swift */; };
+		B0A081D51C323821008274DA /* TurnListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D41C323821008274DA /* TurnListTableCell.swift */; };
+		B0A081D71C324865008274DA /* TurnListUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */; };
+		B0A081D91C324A13008274DA /* TurnListUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D81C324A13008274DA /* TurnListUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		B0188EC61C2E6BB2004FBA03 /* SnapDecisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapDecisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0188ECA1C2E6BB2004FBA03 /* SnapDecisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapDecisionUITests.swift; sourceTree = "<group>"; };
 		B0188ECC1C2E6BB2004FBA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A081D21C321F7C008274DA /* TurnListGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListGenerator.swift; sourceTree = "<group>"; };
+		B0A081D41C323821008274DA /* TurnListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListTableCell.swift; sourceTree = "<group>"; };
+		B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListUserTableViewController.swift; sourceTree = "<group>"; };
+		B0A081D81C324A13008274DA /* TurnListUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				B0188EB11C2E6BB2004FBA03 /* Assets.xcassets */,
 				B0188EB31C2E6BB2004FBA03 /* LaunchScreen.storyboard */,
 				B0188EB61C2E6BB2004FBA03 /* Info.plist */,
+				B0A081D21C321F7C008274DA /* TurnListGenerator.swift */,
+				B0A081D41C323821008274DA /* TurnListTableCell.swift */,
+				B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */,
+				B0A081D81C324A13008274DA /* TurnListUser.swift */,
 			);
 			path = SnapDecision;
 			sourceTree = "<group>";
@@ -258,6 +270,10 @@
 			files = (
 				B0188EAD1C2E6BB2004FBA03 /* ViewController.swift in Sources */,
 				B0188EAB1C2E6BB2004FBA03 /* AppDelegate.swift in Sources */,
+				B0A081D71C324865008274DA /* TurnListUserTableViewController.swift in Sources */,
+				B0A081D91C324A13008274DA /* TurnListUser.swift in Sources */,
+				B0A081D31C321F7C008274DA /* TurnListGenerator.swift in Sources */,
+				B0A081D51C323821008274DA /* TurnListTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +500,7 @@
 				B0188ED11C2E6BB2004FBA03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0188ED21C2E6BB2004FBA03 /* Build configuration list for PBXNativeTarget "SnapDecisionTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +509,7 @@
 				B0188ED41C2E6BB2004FBA03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0188ED51C2E6BB2004FBA03 /* Build configuration list for PBXNativeTarget "SnapDecisionUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +518,7 @@
 				B0188ED71C2E6BB2004FBA03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
