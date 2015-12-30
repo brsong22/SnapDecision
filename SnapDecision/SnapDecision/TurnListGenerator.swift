@@ -5,6 +5,9 @@
 //  Created by Richard Song on 12/28/15.
 //  Copyright © 2015 brsong22. All rights reserved.
 //
+//  *code for setting up data passing to tableview using
+//  prepareforsegue adapted from: http://makeapppie.com/2014/07/01/swift-swift-using-segues-and-delegates-in-navigation-controllers-part-1-the-template/
+//
 //  *code to hide keyboard on tap outside of textfield found at: stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
 //
 
