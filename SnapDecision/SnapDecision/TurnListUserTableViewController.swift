@@ -14,11 +14,16 @@ import UIKit
 class TurnListUserTableViewController: UITableViewController {
 
     var users = [TurnListUser]()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        loadUsers();
+//        self.turnListTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TurnListTableCell")
+//        
+//        turnListTable.delegate = self
+//        turnListTable.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,8 +51,9 @@ class TurnListUserTableViewController: UITableViewController {
         return cell
     }
     
-    func loadUsers(){
-        let testUser = TurnListUser(userName: "test user")
-        users += [testUser]
+    func addUser(newUser: TurnListUser){
+        users.append(newUser)
+        print(users.count)
+        tableView.reloadData()
     }
 }

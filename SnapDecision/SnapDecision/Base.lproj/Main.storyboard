@@ -99,6 +99,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addUserButtonPress:" destination="vbs-Cv-Ejv" eventType="touchUpInside" id="pu9-PH-H99"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OiW-AS-wm4">
                                 <rect key="frame" x="27" y="174" width="391" height="30"/>
@@ -118,7 +121,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-R7-yfi">
                                 <rect key="frame" x="27" y="212" width="553" height="380"/>
                                 <connections>
-                                    <segue destination="7MI-wp-MTa" kind="embed" id="Mez-Uq-JyX"/>
+                                    <segue destination="7MI-wp-MTa" kind="embed" identifier="turnListTableEmbed" id="Mez-Uq-JyX"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -168,6 +171,7 @@
                     <connections>
                         <outlet property="addUserButton" destination="0sQ-Lo-PHK" id="Jb6-YC-mHw"/>
                         <outlet property="addUserTextField" destination="OiW-AS-wm4" id="wHO-wK-ceR"/>
+                        <outlet property="turnListTableContainer" destination="zuK-R7-yfi" id="zfa-GC-CPT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0n-Ek-NqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TurnListTableCell" id="ZFb-du-D6u" customClass="TurnListTableCell" customModule="SnapDecision" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TurnListTableCell" id="ZFb-du-D6u" customClass="TurnListTableCell" customModule="SnapDecision" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="553" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZFb-du-D6u" id="tBm-A0-Hws">
@@ -203,10 +207,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7MI-wp-MTa" id="AB8-px-fLf"/>
-                            <outlet property="delegate" destination="7MI-wp-MTa" id="DyG-uT-t5c"/>
-                        </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="StC-LG-1n4" userLabel="First Responder" sceneMemberID="firstResponder"/>
