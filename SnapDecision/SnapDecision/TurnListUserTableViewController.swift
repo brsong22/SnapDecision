@@ -53,7 +53,6 @@ class TurnListUserTableViewController: UITableViewController {
     
     func addUser(newUser: TurnListUser){
         users.append(newUser)
-        print(users.count)
         tableView.reloadData()
     }
 }

@@ -103,7 +103,7 @@
                                     <action selector="addUserButtonPress:" destination="vbs-Cv-Ejv" eventType="touchUpInside" id="pu9-PH-H99"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OiW-AS-wm4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OiW-AS-wm4">
                                 <rect key="frame" x="27" y="174" width="391" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="he9-IJ-hbM"/>
@@ -118,8 +118,8 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-R7-yfi">
-                                <rect key="frame" x="27" y="212" width="553" height="380"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-R7-yfi">
+                                <rect key="frame" x="23" y="212" width="553" height="380"/>
                                 <connections>
                                     <segue destination="7MI-wp-MTa" kind="embed" identifier="turnListTableEmbed" id="Mez-Uq-JyX"/>
                                 </connections>
@@ -129,6 +129,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="OiW-AS-wm4" secondAttribute="trailing" constant="162" id="0aR-5K-wfm"/>
                             <constraint firstItem="OiW-AS-wm4" firstAttribute="top" secondItem="f8u-bf-cwt" secondAttribute="bottom" constant="63" id="CxQ-U7-wH0"/>
+                            <constraint firstItem="zuK-R7-yfi" firstAttribute="centerX" secondItem="f8u-bf-cwt" secondAttribute="centerX" id="D5X-NN-8id"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OiW-AS-wm4" secondAttribute="trailing" constant="162" id="Igt-AG-u2v"/>
                             <constraint firstItem="0sQ-Lo-PHK" firstAttribute="height" secondItem="OiW-AS-wm4" secondAttribute="height" id="Ow4-zZ-wPi"/>
                             <constraint firstItem="0sQ-Lo-PHK" firstAttribute="top" secondItem="OiW-AS-wm4" secondAttribute="top" id="PMX-HM-St3"/>
@@ -143,13 +144,16 @@
                             <constraint firstItem="kvd-Iy-Ezd" firstAttribute="top" secondItem="NXI-mu-7G5" secondAttribute="bottom" constant="8" symbolic="YES" id="eq3-FA-rdH"/>
                             <constraint firstItem="OiW-AS-wm4" firstAttribute="leading" secondItem="PCb-Xh-ct9" secondAttribute="leadingMargin" constant="7" id="jUn-cE-48z"/>
                             <constraint firstItem="OiW-AS-wm4" firstAttribute="leading" secondItem="PCb-Xh-ct9" secondAttribute="leadingMargin" constant="7" id="kNf-BM-RS5"/>
+                            <constraint firstItem="zuK-R7-yfi" firstAttribute="top" secondItem="OiW-AS-wm4" secondAttribute="bottom" constant="8" symbolic="YES" id="ltu-1F-Z6J"/>
                             <constraint firstItem="0sQ-Lo-PHK" firstAttribute="leading" secondItem="OiW-AS-wm4" secondAttribute="trailing" constant="8" id="mmN-N4-8KY"/>
+                            <constraint firstItem="zuK-R7-yfi" firstAttribute="leading" secondItem="PCb-Xh-ct9" secondAttribute="leadingMargin" constant="3" id="oHB-Jk-qPG"/>
                             <constraint firstItem="0sQ-Lo-PHK" firstAttribute="leading" secondItem="OiW-AS-wm4" secondAttribute="trailing" constant="8" symbolic="YES" id="oQn-Go-VCM"/>
                             <constraint firstAttribute="trailing" secondItem="OiW-AS-wm4" secondAttribute="trailing" constant="182" id="s6r-GU-WZo"/>
                             <constraint firstItem="kvd-Iy-Ezd" firstAttribute="centerX" secondItem="f8u-bf-cwt" secondAttribute="centerX" id="sXV-SJ-Sq2"/>
                             <constraint firstItem="0sQ-Lo-PHK" firstAttribute="top" secondItem="OiW-AS-wm4" secondAttribute="top" id="ueB-i0-EU5"/>
                             <constraint firstItem="OiW-AS-wm4" firstAttribute="top" secondItem="0sQ-Lo-PHK" secondAttribute="top" id="vPR-i1-4Sd"/>
                             <constraint firstItem="0sQ-Lo-PHK" firstAttribute="leading" secondItem="OiW-AS-wm4" secondAttribute="trailing" constant="8" symbolic="YES" id="vyR-ye-CTW"/>
+                            <constraint firstItem="hbf-6a-FAf" firstAttribute="top" secondItem="zuK-R7-yfi" secondAttribute="bottom" constant="8" symbolic="YES" id="wwr-de-IWr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -195,7 +199,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exB-LM-Enn">
-                                            <rect key="frame" x="8" y="3" width="584" height="35.5"/>
+                                            <rect key="frame" x="29" y="3" width="516" height="35.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -211,7 +215,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="StC-LG-1n4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="376"/>
+            <point key="canvasLocation" x="1615.5" y="376"/>
         </scene>
     </scenes>
 </document>
