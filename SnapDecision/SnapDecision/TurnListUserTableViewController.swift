@@ -51,8 +51,23 @@ class TurnListUserTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.Delete){
+            users.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+    }
+    
     func addUser(newUser: TurnListUser){
         users.append(newUser)
         tableView.reloadData()
+    }
+    
+    func getUserList() -> [TurnListUser]{
+        return users
     }
 }

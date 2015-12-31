@@ -22,4 +22,13 @@ class TurnListUser {
     func getName()->String{
         return self.name
     }
+    
+    func compareUsers(secondUser: TurnListUser) -> Bool {
+        if(self.getName() == secondUser.getName()){
+            return true
+        }
+        else{
+            return false
+        }
+    }
 }

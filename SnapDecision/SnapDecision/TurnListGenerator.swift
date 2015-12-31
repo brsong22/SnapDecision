@@ -15,6 +15,7 @@ import UIKit
 
 class TurnListGenerator: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var addUserTextField: UITextField!
     @IBOutlet weak var addUserButton: UIButton!
     @IBOutlet weak var turnListTableContainer: UIView!
@@ -23,6 +24,10 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        errorLabel.layer.borderColor = UIColor.redColor().CGColor
+        errorLabel.layer.borderWidth = 1.0
+        errorLabel.layer.cornerRadius = 5
+        errorLabel.hidden = true
         self.addUserTextField.delegate = self
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -39,21 +44,33 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func addUserButtonPress(sender: AnyObject) {
+    @IBAction func generateListButtonPress(sender: AnyObject) {
+        
+    }
+    
+    func addUser(){
         let newUser = TurnListUser(userName: addUserTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
         if(newUser.getName() != ""){
+            let users = turnListTableVC.getUserList()
+            for user in users{
+                if(user.compareUsers(newUser)){
+                    errorLabel.hidden = false
+                    return
+                }
+            }
             turnListTableVC.addUser(newUser)
+            errorLabel.hidden = true
         }
         clearText()
-        dismissKeyboard()
     }
     
     func dismissKeyboard(){
         view.endEditing(true)
+        errorLabel.hidden = true
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        addUserButtonPress(self)
+        addUser()
         return true
     }
     func clearText(){
