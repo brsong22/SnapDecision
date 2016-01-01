@@ -39,13 +39,12 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-            if (segue.identifier == "turnListTableEmbed") {
-                turnListTableVC = segue.destinationViewController as! TurnListUserTableViewController
-        }
+            turnListTableVC = segue.destinationViewController as! TurnListUserTableViewController
     }
     
     @IBAction func generateListButtonPress(sender: AnyObject) {
-        
+        turnListTableVC.users = turnListTableVC.users.shuffle()
+        turnListTableVC.tableView.reloadData()
     }
     
     func addUser(){
@@ -75,5 +74,33 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
     }
     func clearText(){
         addUserTextField.text = ""
+    }
+}
+
+//functions for shuffle found at
+//http://stackoverflow.com/questions/24026510/how-do-i-shuffle-an-array-in-swift
+
+//extend the shuffle method of Swift collections
+extension CollectionType {
+    func shuffle() -> [Generator.Element] {
+        var list = Array(self)
+        list.shuffleInPlace()
+        return list
+    }
+}
+
+//extend the shuffleInPlace method
+extension MutableCollectionType where Index == Int {
+    mutating func shuffleInPlace(){
+        if (count > 1){
+            for(var i = 0; i < count-1; i++){
+                let rand = Int(arc4random_uniform(UInt32(count - i))) + i
+                guard i != rand else {//if i == rand dont swap the index with itself
+                    continue
+                }
+                swap(&self[i], &self[rand]) //if i != rand swap the indices
+            }
+        }
+        
     }
 }

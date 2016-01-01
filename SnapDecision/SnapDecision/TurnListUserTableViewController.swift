@@ -20,10 +20,6 @@ class TurnListUserTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        self.turnListTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TurnListTableCell")
-//        
-//        turnListTable.delegate = self
-//        turnListTable.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {

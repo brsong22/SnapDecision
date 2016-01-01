@@ -18,7 +18,6 @@
 		B0A081D51C323821008274DA /* TurnListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D41C323821008274DA /* TurnListTableCell.swift */; };
 		B0A081D71C324865008274DA /* TurnListUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */; };
 		B0A081D91C324A13008274DA /* TurnListUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D81C324A13008274DA /* TurnListUser.swift */; };
-		B0A081DB1C34FD01008274DA /* GeneratedTurnList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081DA1C34FD01008274DA /* GeneratedTurnList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		B0A081D41C323821008274DA /* TurnListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListTableCell.swift; sourceTree = "<group>"; };
 		B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListUserTableViewController.swift; sourceTree = "<group>"; };
 		B0A081D81C324A13008274DA /* TurnListUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListUser.swift; sourceTree = "<group>"; };
-		B0A081DA1C34FD01008274DA /* GeneratedTurnList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedTurnList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 				B0A081D41C323821008274DA /* TurnListTableCell.swift */,
 				B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */,
 				B0A081D81C324A13008274DA /* TurnListUser.swift */,
-				B0A081DA1C34FD01008274DA /* GeneratedTurnList.swift */,
 			);
 			path = SnapDecision;
 			sourceTree = "<group>";
@@ -275,7 +272,6 @@
 				B0188EAB1C2E6BB2004FBA03 /* AppDelegate.swift in Sources */,
 				B0A081D71C324865008274DA /* TurnListUserTableViewController.swift in Sources */,
 				B0A081D91C324A13008274DA /* TurnListUser.swift in Sources */,
-				B0A081DB1C34FD01008274DA /* GeneratedTurnList.swift in Sources */,
 				B0A081D31C321F7C008274DA /* TurnListGenerator.swift in Sources */,
 				B0A081D51C323821008274DA /* TurnListTableCell.swift in Sources */,
 			);
