@@ -174,9 +174,6 @@
                                 <exclude reference="vyR-ye-CTW"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="33l-xe-oSP" appends="YES" id="Cmo-CT-fRb"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="addUserButton" destination="0sQ-Lo-PHK" id="YxL-0Q-Uov"/>
@@ -186,11 +183,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0n-Ek-NqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="33l-xe-oSP">
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="eSg-AJ-Zth"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="940" y="337"/>
         </scene>
@@ -199,15 +191,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="TurnListUserTableID" id="7MI-wp-MTa" customClass="TurnListUserTableViewController" customModule="SnapDecision" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="paL-jU-5VH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="553" height="380"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TurnListTableCell" id="ZFb-du-D6u" customClass="TurnListTableCell" customModule="SnapDecision" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="553" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZFb-du-D6u" id="tBm-A0-Hws">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="553" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exB-LM-Enn">
@@ -230,7 +222,4 @@
             <point key="canvasLocation" x="1615.5" y="376"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eSg-AJ-Zth"/>
-    </inferredMetricsTieBreakers>
 </document>

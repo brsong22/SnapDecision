@@ -39,7 +39,10 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-            turnListTableVC = segue.destinationViewController as! TurnListUserTableViewController
+        
+        if(segue.identifier == "TurnListUserTableViewController"){
+        turnListTableVC = segue.destinationViewController as! TurnListUserTableViewController
+        }
     }
     
     @IBAction func generateListButtonPress(sender: AnyObject) {

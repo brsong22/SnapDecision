@@ -11,4 +11,5 @@ import UIKit
 class TurnListTableCell: UITableViewCell {
 
     @IBOutlet weak var turnListCellLabel: UILabel!
+
 }
