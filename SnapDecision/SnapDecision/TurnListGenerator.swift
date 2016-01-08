@@ -15,7 +15,7 @@ import UIKit
 
 class TurnListGenerator: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var addUserTextField: UITextField!
     @IBOutlet weak var addUserButton: UIButton!
     @IBOutlet weak var turnListTableContainer: UIView!
@@ -24,10 +24,10 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        errorLabel.layer.borderColor = UIColor.redColor().CGColor
-        errorLabel.layer.borderWidth = 1.0
-        errorLabel.layer.cornerRadius = 5
-        errorLabel.hidden = true
+        
+        messageLabel.layer.borderWidth = 1.0
+        messageLabel.layer.cornerRadius = 5
+        messageLabel.hidden = true
         self.addUserTextField.delegate = self
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -45,6 +45,7 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
     @IBAction func generateListButtonPress(sender: AnyObject) {
         turnListTableVC.users = turnListTableVC.users.shuffle()
         turnListTableVC.tableView.reloadData()
+        showSuccessLabel()
     }
     
     func addUser(){
@@ -53,19 +54,19 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
             let users = turnListTableVC.getUserList()
             for user in users{
                 if(user.compareUsers(newUser)){
-                    errorLabel.hidden = false
+                    showErrorLabel()
                     return
                 }
             }
             turnListTableVC.addUser(newUser)
-            errorLabel.hidden = true
+            messageLabel.hidden = true
         }
         clearText()
     }
     
     func dismissKeyboard(){
         view.endEditing(true)
-        errorLabel.hidden = true
+        messageLabel.hidden = true
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -74,6 +75,18 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
     }
     func clearText(){
         addUserTextField.text = ""
+    }
+    
+    func showErrorLabel(){
+        messageLabel.hidden = false
+        messageLabel.layer.borderColor = UIColor.redColor().CGColor
+        messageLabel.text = "Error! User already exists"
+    }
+    
+    func showSuccessLabel(){
+        messageLabel.hidden = false
+        messageLabel.layer.borderColor = UIColor.greenColor().CGColor
+        messageLabel.text = "Success! Random order generated"
     }
 }
 
