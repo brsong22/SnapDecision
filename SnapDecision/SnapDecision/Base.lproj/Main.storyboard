@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-686" y="376"/>
         </scene>
-        <!--View Controller-->
+        <!--Snap Decision-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="SnapDecisionHomeID" id="BYZ-38-t0r" customClass="ViewController" customModule="SnapDecision" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,16 +56,16 @@
                             <constraint firstItem="N98-ty-X4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BU6-qe-gB0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fJp-kQ-Ci0"/>
+                    <navigationItem key="navigationItem" title="Snap Decision" id="fJp-kQ-Ci0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="337"/>
         </scene>
-        <!--Turn List Generator-->
+        <!--Turn List-->
         <scene sceneID="3Ku-lw-Yu6">
             <objects>
-                <viewController storyboardIdentifier="TurnOrderListID" id="vbs-Cv-Ejv" customClass="TurnListGenerator" customModule="SnapDecision" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TurnOrderListID" title="Turn List" id="vbs-Cv-Ejv" customClass="TurnListGenerator" customModule="SnapDecision" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NXI-mu-7G5"/>
                         <viewControllerLayoutGuide type="bottom" id="hbf-6a-FAf"/>
