@@ -49,11 +49,28 @@
                                     <segue destination="vbs-Cv-Ejv" kind="show" identifier="turnListGeneratorPush" id="I7K-0c-tAY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djP-XY-tJ8">
+                                <rect key="frame" x="230" y="232" width="140" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.8366541717" blue="0.080783091789999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="3up-Fe-gfK"/>
+                                    <constraint firstAttribute="height" constant="60" id="kAi-wV-ZmL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <state key="normal" title="Random Number">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Quv-pG-Zai" kind="show" id="Sqp-Ko-TKV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N98-ty-X4X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="77U-9G-EpF"/>
                             <constraint firstItem="N98-ty-X4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BU6-qe-gB0"/>
+                            <constraint firstItem="djP-XY-tJ8" firstAttribute="leading" secondItem="N98-ty-X4X" secondAttribute="leading" id="Cch-51-hbm"/>
+                            <constraint firstItem="djP-XY-tJ8" firstAttribute="top" secondItem="N98-ty-X4X" secondAttribute="bottom" constant="34" id="q62-1u-V4E"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Snap Decision" id="fJp-kQ-Ci0"/>
@@ -185,6 +202,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0n-Ek-NqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="940" y="337"/>
+        </scene>
+        <!--Random Number-->
+        <scene sceneID="cBG-Fg-x4s">
+            <objects>
+                <viewController storyboardIdentifier="RandomNumberID" title="Random Number" id="Quv-pG-Zai" customClass="RandomNumberViewController" customModule="SnapDecision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7R2-UZ-Np2"/>
+                        <viewControllerLayoutGuide type="bottom" id="lYR-RQ-2gq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ben-sM-SVI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cvF-by-QTG">
+                                <rect key="frame" x="20" y="551" width="94" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="3wg-l7-XWq"/>
+                                </constraints>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Range" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xH-Fy-cmB">
+                                <rect key="frame" x="230" y="526" width="139" height="54"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6H-2C-qZd">
+                                <rect key="frame" x="20" y="449" width="94" height="94"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPj-re-l5O">
+                                <rect key="frame" x="486" y="449" width="94" height="94"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-oY-caY">
+                                <rect key="frame" x="486" y="551" width="94" height="29"/>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cvF-by-QTG" firstAttribute="leading" secondItem="P6H-2C-qZd" secondAttribute="leading" id="2Ss-s4-7TJ"/>
+                            <constraint firstItem="2Ke-oY-caY" firstAttribute="trailing" secondItem="Ben-sM-SVI" secondAttribute="trailingMargin" id="3OQ-co-pNn"/>
+                            <constraint firstItem="P6H-2C-qZd" firstAttribute="leading" secondItem="Ben-sM-SVI" secondAttribute="leadingMargin" id="4Eq-48-7lZ"/>
+                            <constraint firstItem="BPj-re-l5O" firstAttribute="leading" secondItem="2Ke-oY-caY" secondAttribute="leading" id="4J6-cs-UBh"/>
+                            <constraint firstItem="BPj-re-l5O" firstAttribute="trailing" secondItem="2Ke-oY-caY" secondAttribute="trailing" id="6iS-H9-el6"/>
+                            <constraint firstItem="BPj-re-l5O" firstAttribute="baseline" secondItem="P6H-2C-qZd" secondAttribute="baseline" id="9Lq-xh-9aU"/>
+                            <constraint firstItem="P6H-2C-qZd" firstAttribute="top" secondItem="7R2-UZ-Np2" secondAttribute="bottom" constant="385" id="NJs-6i-P9A"/>
+                            <constraint firstItem="2Ke-oY-caY" firstAttribute="top" secondItem="BPj-re-l5O" secondAttribute="bottom" constant="8" symbolic="YES" id="alg-Zd-7gJ"/>
+                            <constraint firstItem="BPj-re-l5O" firstAttribute="bottom" secondItem="P6H-2C-qZd" secondAttribute="bottom" id="nYU-0C-dVF"/>
+                            <constraint firstItem="cvF-by-QTG" firstAttribute="bottom" secondItem="1xH-Fy-cmB" secondAttribute="bottom" id="w2F-gZ-qFN"/>
+                            <constraint firstItem="2Ke-oY-caY" firstAttribute="top" secondItem="cvF-by-QTG" secondAttribute="top" id="wKL-C4-4R6"/>
+                            <constraint firstItem="cvF-by-QTG" firstAttribute="trailing" secondItem="P6H-2C-qZd" secondAttribute="trailing" id="xC8-Yb-s3v"/>
+                            <constraint firstAttribute="bottom" secondItem="cvF-by-QTG" secondAttribute="bottom" constant="20" symbolic="YES" id="xl0-J0-3VM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rangeTextCeiling" destination="BPj-re-l5O" id="EJY-hZ-96b"/>
+                        <outlet property="rangeTextFloor" destination="P6H-2C-qZd" id="HK1-DO-nPl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEI-je-4ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="1054"/>
         </scene>
         <!--Turn List User Table View Controller-->
         <scene sceneID="w2n-AI-zsB">

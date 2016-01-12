@@ -18,6 +18,7 @@
 		B0A081D51C323821008274DA /* TurnListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D41C323821008274DA /* TurnListTableCell.swift */; };
 		B0A081D71C324865008274DA /* TurnListUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */; };
 		B0A081D91C324A13008274DA /* TurnListUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A081D81C324A13008274DA /* TurnListUser.swift */; };
+		B0E206E41C4497B100BA453D /* RandomNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E206E31C4497B100BA453D /* RandomNumberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +52,11 @@
 		B0188EC61C2E6BB2004FBA03 /* SnapDecisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapDecisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0188ECA1C2E6BB2004FBA03 /* SnapDecisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapDecisionUITests.swift; sourceTree = "<group>"; };
 		B0188ECC1C2E6BB2004FBA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0A081D21C321F7C008274DA /* TurnListGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListGenerator.swift; sourceTree = "<group>"; };
-		B0A081D41C323821008274DA /* TurnListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListTableCell.swift; sourceTree = "<group>"; };
-		B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListUserTableViewController.swift; sourceTree = "<group>"; };
-		B0A081D81C324A13008274DA /* TurnListUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnListUser.swift; sourceTree = "<group>"; };
+		B0A081D21C321F7C008274DA /* TurnListGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurnListGenerator.swift; path = SnapDecision/TurnListGenerator/TurnListGenerator.swift; sourceTree = SOURCE_ROOT; };
+		B0A081D41C323821008274DA /* TurnListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurnListTableCell.swift; path = /Users/brsong/Projects/SnapDecision/SnapDecision/SnapDecision/TurnListGenerator/TurnListTableCell.swift; sourceTree = "<absolute>"; };
+		B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurnListUserTableViewController.swift; path = TurnListGenerator/TurnListUserTableViewController.swift; sourceTree = "<group>"; };
+		B0A081D81C324A13008274DA /* TurnListUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurnListUser.swift; path = TurnListGenerator/TurnListUser.swift; sourceTree = "<group>"; };
+		B0E206E31C4497B100BA453D /* RandomNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomNumberViewController.swift; path = RandomNumberGenerator/RandomNumberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				B0A081D41C323821008274DA /* TurnListTableCell.swift */,
 				B0A081D61C324865008274DA /* TurnListUserTableViewController.swift */,
 				B0A081D81C324A13008274DA /* TurnListUser.swift */,
+				B0E206E31C4497B100BA453D /* RandomNumberViewController.swift */,
 			);
 			path = SnapDecision;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0188EAD1C2E6BB2004FBA03 /* ViewController.swift in Sources */,
+				B0E206E41C4497B100BA453D /* RandomNumberViewController.swift in Sources */,
 				B0188EAB1C2E6BB2004FBA03 /* AppDelegate.swift in Sources */,
 				B0A081D71C324865008274DA /* TurnListUserTableViewController.swift in Sources */,
 				B0A081D91C324A13008274DA /* TurnListUser.swift in Sources */,
