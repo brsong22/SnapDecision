@@ -21,6 +21,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backButton = UIBarButtonItem()
+        backButton.title = "O Snap!"
+        backButton.style = UIBarButtonItemStyle.Plain
+        backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Noteworthy", size: 20)!], forState: UIControlState.Normal)
+        navigationItem.backBarButtonItem = backButton
+    }
 
 }
 

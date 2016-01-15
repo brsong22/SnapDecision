@@ -66,4 +66,9 @@ class TurnListUserTableViewController: UITableViewController {
     func getUserList() -> [TurnListUser]{
         return users
     }
+    
+    func clearUsers(){
+        users.removeAll()
+        tableView.reloadData()
+    }
 }

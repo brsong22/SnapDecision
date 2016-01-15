@@ -40,7 +40,7 @@ class TurnListGenerator: UIViewController, UITextFieldDelegate {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        if(segue.identifier == "TurnListUserTableViewController"){
+        if(segue.identifier == "turnListTableEmbed"){
         turnListTableVC = segue.destinationViewController as! TurnListUserTableViewController
         }
     }
