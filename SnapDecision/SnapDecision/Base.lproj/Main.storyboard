@@ -275,7 +275,7 @@
                                     <action selector="quantityAdjust:" destination="Quv-pG-Zai" eventType="valueChanged" id="flT-S6-2aA"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="-999999" maximumValue="999999" translatesAutoresizingMaskIntoConstraints="NO" id="wLY-WT-ENN">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" maximumValue="999999" translatesAutoresizingMaskIntoConstraints="NO" id="wLY-WT-ENN">
                                 <rect key="frame" x="253" y="146" width="94" height="29"/>
                                 <color key="backgroundColor" red="1" green="0.8366541717" blue="0.080783091789999997" alpha="0.47118794330000002" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -283,7 +283,7 @@
                                     <action selector="upperLimitAdjust:" destination="Quv-pG-Zai" eventType="valueChanged" id="EWG-PO-ZhI"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-999999" maximumValue="999999" translatesAutoresizingMaskIntoConstraints="NO" id="tEr-ep-Qp7">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="999999" translatesAutoresizingMaskIntoConstraints="NO" id="tEr-ep-Qp7">
                                 <rect key="frame" x="17" y="146" width="94" height="29"/>
                                 <color key="backgroundColor" red="1" green="0.8366541717" blue="0.080783091789999997" alpha="0.47118794330000002" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

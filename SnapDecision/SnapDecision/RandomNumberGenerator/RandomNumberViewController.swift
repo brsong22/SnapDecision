@@ -32,6 +32,9 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
         self.quantityText.delegate = self
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissNumpad")
         view.addGestureRecognizer(tap)
+        
+        lowerLimitStepper.maximumValue = upperLimitStepper.value
+        upperLimitStepper.minimumValue = lowerLimitStepper.value
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,10 +50,12 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func lowerLimitAdjust(sender: UIStepper) {
         lowerLimitText.text = Int(sender.value).description
+        updateLowerLimit()
     }
     
     @IBAction func upperLimitAdjust(sender: UIStepper) {
         upperLimitText.text = Int(sender.value).description
+        updateUpperLimit()
     }
     
     @IBAction func quantityAdjust(sender: UIStepper) {
@@ -63,11 +68,21 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func upperLimitChanged(sender: UITextField) {
+        upperLimitText.text = Int(upperLimitText.text!)!.description
         updateStepValue(sender.tag)
     }
     
     @IBAction func quantityChanged(sender: UITextField) {
+        quantityText.text = Int(quantityText.text!)!.description
         updateStepValue(sender.tag)
+    }
+    
+    func updateLowerLimit(){
+        upperLimitStepper.minimumValue = lowerLimitStepper.value
+    }
+    
+    func updateUpperLimit(){
+        lowerLimitStepper.maximumValue = upperLimitStepper.value
     }
     
     func dismissNumpad(){
@@ -78,9 +93,11 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
         switch senderID{
         case 1:
             lowerLimitStepper.value = Double(Int(lowerLimitText.text!)!)
+            updateLowerLimit()
             break
         case 2:
             upperLimitStepper.value = Double(Int(upperLimitText.text!)!)
+            updateUpperLimit()
             break
         case 3:
             quantityStepper.value = Double(Int(quantityText.text!)!)
