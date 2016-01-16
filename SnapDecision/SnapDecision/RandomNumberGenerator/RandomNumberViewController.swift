@@ -33,8 +33,8 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissNumpad")
         view.addGestureRecognizer(tap)
         
-        lowerLimitStepper.maximumValue = upperLimitStepper.value
-        upperLimitStepper.minimumValue = lowerLimitStepper.value
+        lowerLimitStepper.maximumValue = upperLimitStepper.value - 1.0
+        upperLimitStepper.minimumValue = lowerLimitStepper.value + 1.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,12 +63,14 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func lowerLimitChanged(sender: UITextField) {
-        lowerLimitText.text = Int(lowerLimitText.text!)!.description
+        let temp = Int(lowerLimitStepper.value)
+        lowerLimitText.text = (Int(lowerLimitText.text!) < Int(upperLimitStepper.value) ? Int(lowerLimitText.text!)!.description : temp.description)
         updateStepValue(sender.tag)
     }
     
     @IBAction func upperLimitChanged(sender: UITextField) {
-        upperLimitText.text = Int(upperLimitText.text!)!.description
+        let temp = Int(upperLimitStepper.value)
+        upperLimitText.text = (Int(upperLimitText.text!) > Int(lowerLimitStepper.value) ? Int(upperLimitText.text!)!.description : temp.description)
         updateStepValue(sender.tag)
     }
     
@@ -78,11 +80,11 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateLowerLimit(){
-        upperLimitStepper.minimumValue = lowerLimitStepper.value
+        upperLimitStepper.minimumValue = lowerLimitStepper.value + 1.0
     }
     
     func updateUpperLimit(){
-        lowerLimitStepper.maximumValue = upperLimitStepper.value
+        lowerLimitStepper.maximumValue = upperLimitStepper.value - 1.0
     }
     
     func dismissNumpad(){
